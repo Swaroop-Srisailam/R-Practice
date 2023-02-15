@@ -1,0 +1,237 @@
+---
+title: "R-Basics1"
+author: "Swaroop Srisailam(22239)"
+date: "2023-02-01"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+## Vectors
+
+```{r}
+#initialising a vector named "vehicles"
+vehicles <- c('Bus','Train','Car') 
+print(vehicles) #printing the vehicles
+print(class(vehicles)) #class of the variable
+
+```
+
+## Lists
+
+```{r}
+#Creating a list variable named "Student"
+Student<-list("Swaroop","22239",7.2) # list contains (Name,Regdno.,Grade)
+print(Student) #printing the student
+```
+
+## Numeric
+
+```{r}
+num<-234
+print(class(num))
+```
+
+## Integer
+
+```{r}
+int<-34L
+print(class(int))
+```
+
+## Character
+
+```{r}
+ch<-"S"
+print(class(ch))
+```
+
+## Complex
+
+```{r}
+com<-2+4i
+print(class(com))
+```
+
+## Logic
+
+```{r}
+lg<-TRUE
+print(lg)
+```
+
+## Raw
+
+```{r}
+a <- charToRaw("Hola") 
+print(class(a))
+print(a)
+```
+
+## Matrices
+
+#### Row wise arrangement
+
+```{r}
+#initialising the matric A
+A<-matrix(c(1,2,35,44,5,34),nrow = 4,ncol = 6,byrow=TRUE)
+print(A) #priting the matrix A
+```
+
+#### Column wise arrangement
+
+```{r}
+#initialising the matrix B
+B<-matrix(c(1,2,35,44,5,34),nrow = 4,ncol = 6,byrow=FALSE)
+print(B) #printing the matrix B
+```
+
+#### Arithmetic Operations:
+
+##### Addition
+
+```{r}
+C=A+B #addition of two matrices A and B
+print("Addition of A and B:")
+print(C) #printing C
+```
+
+##### Subtraction
+
+```{r}
+C1=A-B #Subtraction of two matrices A and B
+print("Subtraction of A and B:")
+print(C1) # printing C1
+```
+
+##### Multiplication
+
+```{r}
+C2=A*B #Multiplication of two matrices A and B
+print("Multiplication of A and B:")
+print(C2) # printing C2
+```
+
+## Arrays
+
+#### Initializing Array
+
+```{r}
+# Creating an array. 
+arr <- array(c('a','b'),dim=c(3,3,2))
+print(arr)
+
+```
+
+#### Arithmetic operations on array:
+
+##### Addition
+
+```{r}
+ar<- array(c(3,4,3),dim = c(3,3))#initialising
+br<- array(c(3,4,3),dim = c(3,3))
+print("array 'ar'")  #printing the array
+print(ar)          
+print("array'br'")
+print(br)
+cr<- ar+br   #Addition 
+print("Addition of ar and br :")
+print(cr)
+```
+
+##### subtraction
+
+```{r}
+ar1<- array(c(2,1,7),dim = c(3,3))#Initialisation
+br1<- array(c(5,8,3),dim = c(3,3))
+print("array 'ar1'") #printing the array
+print(ar1)
+print("array'br1'")
+print(br1)
+cr1<- ar1-br1 #Subtraction
+print("Subtraction of ar1 and br1 :")
+print(cr1)
+```
+
+##### Multiplication
+
+```{r}
+ar2<- array(c(5,2,1),dim = c(3,3))#initialising
+br2<- array(c(8,7,0),dim = c(3,3))
+print("array 'ar2'")  #printing the array
+print(ar2)          
+print("array'br2'")
+print(br2)
+cr2<- ar2*br2   #Multiplication 
+print("Multiplication of ar2 and br2 :")
+print(cr2)
+```
+
+##### Division
+
+```{r}
+ar3<- array(c(4,9,5),dim = c(3,3))#initialising
+br3<- array(c(2,8,3),dim = c(3,3))
+print("array 'ar3'")  #printing the array
+print(ar3)          
+print("array'br3'")
+print(br3)
+cr3<- ar3/br3   #Division 
+print("Division of ar3 and br3 :")
+print(cr3)
+```
+
+##### Exponent
+
+```{r}
+ar4<- array(c(4,9,5),dim = c(3,3))#initialising
+br4<- array(c(2,8,3),dim = c(3,3))
+print("array 'ar4'")  #printing the array
+print(ar4)          
+print("array'br4'")
+print(br4)
+cr4<- ar4^br4   #exponent 
+print("exponent of ar4 and br4 :")
+print(cr4)
+```
+
+##### modulus
+
+```{r}
+ar5<- array(c(4,9,5),dim = c(3,3))#initialising
+br5<- array(c(2,8,3),dim = c(3,3))
+print("array 'ar5'")  #printing the array
+print(ar5)          
+print("array'br5'")
+print(br5)
+cr5<- ar5%%br5   #exponent 
+print("Modulus of ar5 and br5 :")
+print(cr5)
+```
+
+## Factors
+
+```{r}
+# Create a vector. 
+pets <- c("cat","dog","dog","cat","fish","bird","dog")
+ # Create a factor object. 
+factor_pets <- factor(pets)
+ # Print the factor. 
+print(factor_pets) 
+print(nlevels(factor_pets))
+
+```
+
+## Data Frame
+
+```{r}
+# Create the data frame named Student
+Student <- data.frame(
+ Regdno. = c("22235","22236","22237", "22238","22239"),
+lab1_test = c(7,5,9, 10, 9.5), 
+lab2_test = c(4,6.5,7.5,6, 8)  ) 
+
+print(Student) #printing the data frame"student"
+
+```
