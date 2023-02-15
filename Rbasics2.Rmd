@@ -1,0 +1,209 @@
+---
+title: "Rbasics-2 (Swaroop Srisailam)"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+# Vectors Arithmetic Operation
+
+### Addition
+
+```{r}
+v <- c(3,9.5,6) 
+t <- c(5, 8, 0)
+print(v+t)
+```
+
+### Subtraction
+
+```{r}
+v <- c( 2,5.5,6) 
+t <- c(8, 3, 4)
+print(v-t)
+```
+
+### Multiplication
+
+```{r}
+v <- c( 2,5.5,6) 
+t <- c(8, 3, 4)
+print(v*t)
+```
+
+### Division
+
+```{r}
+v <- c( 2,5.5,6) 
+t <- c(8, 3, 4)
+print(v/t)
+```
+
+### Modulo
+
+```{r}
+a <- c( 2,5.5,6) 
+b<- c(8, 3, 4)
+print(a%%b)  
+```
+
+### **Quotient**
+
+```{r}
+a<- c(1,5,6)  
+b<- c(8, 3, 4) 
+print(a%/%b)
+```
+
+# **Colon Operator**
+
+```{r}
+s <- 0:9 
+print(s)
+```
+
+# %in% Operator
+
+```{r}
+a <- 8 
+b <- 18
+t <- 1:10 
+print(a %in% t) 
+print(b %in% t)
+
+```
+
+# **%\*% Operator**
+
+```{r}
+M = matrix( c(1,1,0,0), nrow=2,ncol=2,byrow = TRUE) 
+t = M %*% t(M) 
+print(t)
+```
+
+# Control Structures
+
+### If Else statement
+
+```{r}
+y <-8
+  if(is.integer(y))
+{ 
+  print("y is an Integer") 
+} else
+ {
+    print("y is not Integer")
+ }
+```
+
+### While Loop
+
+```{r}
+
+i <- 1 
+
+while (i <= 5) 
+{  
+  print(i) 
+  i <- i + 1 
+}
+
+```
+
+### **Repeat Loop**
+
+```{r}
+v <- c("Hola","Swaroop")
+count <- 1
+ repeat{ 
+      print(v) 
+      count <- count+1 
+      if(count > 5)
+      { break } 
+    }
+
+```
+
+### For Loop
+
+```{r}
+v <- LETTERS[1:7]
+ for ( i in v)
+ { 
+  print(i) 
+ }
+
+```
+
+# Loop Control Statement
+
+### Break
+
+```{r}
+v <- letters[1:7]
+ for ( i in v)
+ { 
+   if(i == "c")
+   {
+     break
+   }
+  print(i) 
+ }
+# when loop reaches letter c , break will terminate the loop.
+```
+
+### Next
+
+```{r}
+v <- letters[1:7]
+ for ( i in v)
+ { 
+   if(i == "c")
+   {
+     next
+   }
+  print(i) 
+ }
+# letter c is skipped.
+```
+
+# Data Analysis: Basics
+
+### Importing Data
+
+```{r}
+data<- mtcars
+head(data)
+```
+
+```{r}
+summary(data)
+```
+
+### Average Weight of the cars
+
+```{r}
+mean(data$wt)
+```
+
+### Scatter plot between Mpg and Weight
+
+```{r}
+library(ggplot2)
+ggplot(data, aes(x = wt, y = mpg)) +
+    geom_point()
+
+
+```
+
+### Correlation between Weight and mpg
+
+```{r}
+x<-data$wt
+y<-data$mpg
+cor(x,y)
+```
+
+### Scatter plot between Mpg and Weight
+
+### 
