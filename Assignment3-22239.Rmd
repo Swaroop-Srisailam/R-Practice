@@ -1,0 +1,81 @@
+---
+title: "Assignment3-22239"
+output: html_notebook
+---
+
+```{r}
+Square <- function(a) 
+{ 
+  for (i in 1:a) 
+    { 
+      b <- i^2 
+      print(b) 
+   } 
+}
+Square(2)
+```
+
+## Calling a Function without an Argument
+
+```{r}
+Square <- function() 
+{
+ for(i in 1:10) 
+{
+ print(i^2) 
+}
+ }
+Square()
+
+
+```
+
+```{r}
+maths <- function(a,b,c) 
+{ 
+x <- a*b+c^2
+ print(x)
+ }
+maths(1,2,3)
+maths(a=1,b=2,c=3)
+
+
+```
+
+```{r}
+default <- function(a = 3,b =6) 
+{ z <- a*b 
+print(z) 
+}
+default()
+```
+Lazy Evaluation of Function
+
+```{r}
+new <- function(a, b) 
+{ print(a^2) 
+  print(a) 
+  print(b)
+
+}
+new(2,3)
+
+```
+
+## R Strings
+
+```{r}
+a<-"HI,How you doing"
+print(a)
+```
+
+```{r}
+a<-"he said,'how you doing'"
+print(a)
+```
+```{r}
+
+b<-"Sairam-'sir'"
+print(b)
+```
+
