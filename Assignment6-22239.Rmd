@@ -1,0 +1,56 @@
+---
+title: "Assignmnet-6(Swaroop Srisailam)"
+output: html_notebook
+---
+
+## Reading text file
+
+```{r}
+data= read.delim("logistic.txt",header=FALSE)
+
+print(data)
+```
+
+## Reading CSV file
+
+```{r}
+data2= read.csv("Housing.csv")
+
+
+data2
+```
+
+```{r}
+print(paste("Number of records: ", nrow(data2)))
+
+print(paste("Number of features: ", ncol(data2)))
+```
+
+```{r}
+summary(data2)
+```
+
+## Features
+
+```{r}
+colnames(data2)
+
+```
+
+## Checking Null Values
+
+```{r}
+sum(is.na(data2))
+```
+
+```{r}
+print(paste("The average area of house purchased",mean(data2$area)))
+```
+
+## Reading tsv files
+
+```{r}
+data3<-read.delim("lifeExpectation.tsv",sep="\t")
+
+print(data3)
+```
